@@ -137,16 +137,6 @@ data.map((gridItem,index)=>{
 }      
         </Grid>
       
-{data.map((item, index) => (
-  <div key={index}>
-    <p>Debug: {`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`}</p>
-    <img 
-      src={`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`} 
-      alt="test" 
-      style={{width: '100px'}}
-    />
-  </div>
-))}
  {Array.isArray(data) && data.length>0?<p>{data.length}</p>:<p>asdsdsdfsdf</p>}     
 
         </section>
