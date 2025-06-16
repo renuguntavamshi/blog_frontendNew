@@ -39,7 +39,7 @@ data.slice(0,6).map((gridItem,index)=>{
         <CardMedia
           component="img"
           // height="140px"
-          image={`https://blog-backendnew-1.onrender.com/${gridItem.path.replace("public\\", "").replace(/\\/g, "/")}`}
+       image={`https://blog-backendnew-1.onrender.com/uploads/${encodeURIComponent(gridItem.filename)}`}
           alt={gridItem.blogtitle}
           sx={{ width: '100%', objectFit: 'cover' ,height:"155px"}}
         />
@@ -90,7 +90,7 @@ data.map((gridItem,index)=>{
         <CardMedia
           component="img"
           // height="140px"
-           image={`https://blog-backendnew-1.onrender.com/uploads/${gridItem.filename}`}
+      image={`https://blog-backendnew-1.onrender.com/uploads/${encodeURIComponent(gridItem.filename)}`}
           alt={gridItem.blogtitle}
           sx={{ width: '100%', objectFit: 'cover' ,height:"155px"}}
         />
@@ -133,12 +133,20 @@ data.map((gridItem,index)=>{
 
         </Grid>)
 }):
-
 <p className="text-center">No Data Found</p>  
 }      
         </Grid>
       
-
+{data.map((item, index) => (
+  <div key={index}>
+    <p>Debug: {`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`}</p>
+    <img 
+      src={`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`} 
+      alt="test" 
+      style={{width: '100px'}}
+    />
+  </div>
+))}
  {Array.isArray(data) && data.length>0?<p>{data.length}</p>:<p>asdsdsdfsdf</p>}     
 
         </section>
