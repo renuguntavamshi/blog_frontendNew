@@ -1,12 +1,14 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { useLocation } from "react-router-dom";
-import Corousel from './Corousel';
-import Accordion from './Accordion';
-import GridContent from './GridContent';
+
+const Corousel = lazy(() => import('./Corousel'));
+
+const Accordion = lazy(() => import('./Accordion'));
+const GridContent = lazy(() => import('./GridContent'));
+
 function Home({ setRoute }) {
   const location = useLocation();
-  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     setRoute(location.pathname);
@@ -14,16 +16,17 @@ function Home({ setRoute }) {
 
   return (
     <main>
-   
-      <Corousel />
+      <Suspense fallback={<div>Loading Carousel...</div>}>
+        <Corousel />
+      </Suspense>
       <br/>
-     <Accordion />
-     <br />
- <GridContent />
- <br/>
- <br/>
- <br/>
- <br/>
+      <Suspense fallback={<div>Loading Carousel...</div>}>
+     
+      <Accordion />
+      <br />
+      <GridContent />
+     </Suspense>
+      <br/><br/><br/><br/>
     </main>
   );
 }
