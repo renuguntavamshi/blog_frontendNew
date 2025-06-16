@@ -1,6 +1,3 @@
-import blog1 from "/src/blog1.jpg";
-import blog2 from "/src/blog2.png";
-import blog3 from "/src/blog3.jpeg";
 import homeStyles from "./home.module.css";
 
 function Corousel(){
@@ -36,7 +33,7 @@ function Corousel(){
 
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img  src={blog1} 
+              <img  src="/blog1.jpg" 
     className={`d-block ${homeStyles.responsiveImg} w-100`} 
  
               alt="First slide" />
@@ -46,7 +43,7 @@ function Corousel(){
     </div>
             </div>
             <div className="carousel-item">
-              <img  src={blog2}
+              <img  src="/blog2.png"
   className={`d-block ${homeStyles.responsiveImg} w-100`} 
 alt="Second slide" />
   <div class="carousel-caption d-none d-md-block">
@@ -55,10 +52,11 @@ alt="Second slide" />
     </div>
             </div>
             <div className="carousel-item">
-              <img src={blog3} 
+              <img src="/blog3.jpeg" 
   className={`d-block ${homeStyles.responsiveImg} w-100`} 
 
               alt="Third slide" />
+             
               <div class="carousel-caption d-none d-md-block">
       <h3 >Want to Show the world the taste of your Dishes?</h3>
     <h5 >Perfect!You are just a blog away from showcasing it</h5>

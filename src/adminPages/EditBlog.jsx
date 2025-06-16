@@ -80,20 +80,18 @@ function EditBlog() {
                       }}
                     />
                   </div>
-
-                  {/* Blog Title */}
+                  {/* Blog Category */}
                   <div className="col-sm-12 col-md-6 mb-3">
                     <input
                       type="text"
-                      name="blogtitle"
+                      name="blog_category"
                       className="form-control"
-                      value={blog.blogtitle}
-                      placeholder="Blog Title"
-                      onChange={(e) => setBlog(prev => ({ ...prev, blogtitle: e.target.value }))}
+                      value={blog.blog_category}
+                      placeholder="Blog Category"
+                      onChange={(e) => setBlog(prev => ({ ...prev, blog_category: e.target.value }))}
                     />
                   </div>
-
-                  {/* Published By */}
+                   {/* Published By */}
                   <div className="col-sm-12 col-md-6 mb-3">
                     <input
                       type="text"
@@ -104,6 +102,23 @@ function EditBlog() {
                       onChange={(e) => setBlog(prev => ({ ...prev, publishedBy: e.target.value }))}
                     />
                   </div>
+                </div>
+
+
+   
+                 
+               {/* Blog Title */}
+                  <div className="col-sm-12  mb-3">
+                    <input
+                      type="text"
+                      name="blogtitle"
+                      className="form-control"
+                      value={blog.blogtitle}
+                      placeholder="Blog Title"
+                      onChange={(e) => setBlog(prev => ({ ...prev, blogtitle: e.target.value }))}
+                    />
+                  </div>
+
 
                   {/* Description */}
                   <div className="col-sm-12 mb-3">
@@ -116,19 +131,6 @@ function EditBlog() {
                       onChange={(e) => setBlog(prev => ({ ...prev, description: e.target.value }))}
                     ></textarea>
                   </div>
-
-                  {/* Blog Category */}
-                  <div className="col-sm-12 mb-3">
-                    <input
-                      type="text"
-                      name="blog_category"
-                      className="form-control"
-                      value={blog.blog_category}
-                      placeholder="Blog Category"
-                      onChange={(e) => setBlog(prev => ({ ...prev, blog_category: e.target.value }))}
-                    />
-                  </div>
-                </div>
 
                 {/* Submit Button */}
                 <button type="button" onClick={handleSubmit} className="btn btn-primary btn-md">

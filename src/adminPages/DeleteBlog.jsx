@@ -87,7 +87,7 @@ try {
                     
                    <td><img src={`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`} width="100px" height="60px" alt={`${item.filename}`}/></td>
                    <td>{item.blogtitle}</td>
-                   <td>{item.description}</td>
+                   <td className={AdminStyles.twoLineClamp}>{item.description}</td>
                    <td>{item.publishedBy}</td>
                    <td>{item.blog_category}</td>
 
@@ -101,7 +101,7 @@ try {
         })}
        </tbody>
        
-    </table>:<p className="text-center">No Data Found</p>}
+    </table>:<p className="text-center">Loading...</p>}
 
                 </div>
             </div>

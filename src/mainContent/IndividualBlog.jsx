@@ -18,7 +18,7 @@ function IndividualBlog() {
         <CardMedia
           component="img"
           height="400"
-          image={`https://blog-backendnew-1.onrender.com/${blog.path.replace("public\\", "").replace(/\\/g, "/")}`}
+          image={`https://blog-backendnew-1.onrender.com/uploads/${blog.filename}`}
           alt={blog.blogtitle}
         />
         <CardContent>

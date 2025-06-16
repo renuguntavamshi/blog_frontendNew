@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid';
 import blogStyles from "./blog.module.css"
-import blog1 from "/src/blog1.jpg"
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -17,7 +16,7 @@ setData(result.data.reverse());
 }
 FetchBlogData()
 },[]) 
-  
+ 
     return(
         <div className="px-4 py-2">
         
@@ -29,7 +28,7 @@ FetchBlogData()
 <Grid container key={index} spacing={2} className={`border border-secondary mx-2 my-2 p-2 ${blogStyles.blogBorderStyle}`}  >
 <Grid size={{xs:12,md:3}} >
 <img 
-src={blog1} 
+src={`https://blog-backendnew-1.onrender.com/uploads/${item.filename}`} 
 width="100%"
  height="100%" 
  alt ="blog Image"/>
@@ -55,7 +54,7 @@ width="100%"
 
 )})}
 </>
-:<p>No data found</p>}
+:<p>Loading...</p>}
 
 
 

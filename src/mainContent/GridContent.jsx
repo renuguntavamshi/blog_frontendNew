@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import Chip from '@mui/material/Chip';
-import blog1 from "/src/blog1.jpg"
 import { Link } from 'react-router-dom';
 import {useState, useEffect } from 'react';
  import axios from 'axios';
@@ -91,7 +90,7 @@ data.map((gridItem,index)=>{
         <CardMedia
           component="img"
           // height="140px"
-          image={`https://blog-backendnew-1.onrender.com/${gridItem.path.replace("public\\", "").replace(/\\/g, "/")}`}
+           image={`https://blog-backendnew-1.onrender.com/uploads/${gridItem.filename}`}
           alt={gridItem.blogtitle}
           sx={{ width: '100%', objectFit: 'cover' ,height:"155px"}}
         />
