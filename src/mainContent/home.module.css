@@ -1,0 +1,11 @@
+.responsiveImg {
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .responsiveImg {
+    height: 70vh;
+  }
+}

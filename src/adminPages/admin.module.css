@@ -1,0 +1,53 @@
+.formBorder{
+box-shadow: 2px 3px 8px 2px #7474e6;
+padding-top: 10px;
+background-color: rgb(255, 255, 255);
+
+}
+
+.body{
+    background-color: rgb(239, 239, 239);
+height: 100vh;
+}
+.trow:nth-child(even){
+    background-color: rgb(255, 255, 255);
+    
+}
+.mainpadding{
+padding:0px;
+}
+.css-1f0s1m3{
+    padding:0px;
+}
+.formPadding{
+    padding:35px 25px 35px;
+
+}
+.formHeading{
+    color:rgb(46, 16, 138);
+    height: px;
+
+
+}
+.logoutbtn{
+    margin:0px;
+    border: none;
+    color: #1976d2;
+    padding:5px 10px;
+    border-radius: 2px;
+}
+.blueColortext{
+    background-color:#1976d2;
+
+}
+.inputBorder{
+    border:1px solid rgb(196, 193, 193);
+   
+}
+a{
+    text-decoration: none;
+}
+.css-1k455el{
+    padding: 0px 8px;
+     min-height: 0px;
+} 

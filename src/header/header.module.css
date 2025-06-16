@@ -1,0 +1,22 @@
+
+.header ul li a{
+    text-decoration: none;
+    font-size: 18px;
+padding:0px 10px 15px;
+}
+
+.active{
+color:blue;
+width: 90vw;
+border-bottom: 2px solid blue;
+}
+.inactive{
+    color:black;
+}
+
+@media screen and (max-width:992px) {
+    .active{
+        border-bottom: none;
+    }
+
+}
